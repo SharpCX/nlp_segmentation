@@ -24,7 +24,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="sougou_fenci",
-    version="1.0.0",
+    version="1.0.1",
     author="cx",
     author_email="sharpcx@live.com",
     description="搜狗分词工具",
