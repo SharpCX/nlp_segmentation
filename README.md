@@ -28,6 +28,7 @@ for result_item in resp.result:
 ### 安装
 `npm install -g sougou_fenci`
 
+
 ### command-line
 $ sougou_fenci_cli 武汉市长江大桥
 -> 
