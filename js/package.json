@@ -1,0 +1,31 @@
+{
+  "name": "sougou_fenci",
+  "version": "1.0.0",
+  "description": "搜狗分词工具",
+  "main": "index.js",
+  "scripts": {
+    "run" : "node index.js"
+  },
+  "bin": {
+    "sougou_fenci_cli": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SharpCX/sougou_fenci.git"
+  },
+  "keywords": [
+    "sougou",
+    "搜狗",
+    "分词",
+    "fenci"
+  ],
+  "author": "cx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SharpCX/sougou_fenci/issues"
+  },
+  "homepage": "https://github.com/SharpCX/sougou_fenci#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
