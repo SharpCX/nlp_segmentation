@@ -1,8 +1,9 @@
 {
   "name": "sougou_fenci",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "搜狗分词工具",
   "main": "index.js",
+  "readme": "",
   "scripts": {
     "run" : "node index.js"
   },
