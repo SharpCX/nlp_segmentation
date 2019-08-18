@@ -8,4 +8,19 @@ if len(sys.argv) < 2:
     print("请输入要分词的内容")
 else:
     resp = sougou_fenci.get_fenci(sys.argv[1])
-    print(resp)
+    result = resp.get("result")
+
+    if result:
+
+        max_length = 10
+        for result_item in result:
+            if len(result_item[0]) > max_length:
+                max_length = result_item[0]
+            if len(result_item[1]) > max_length:
+                max_length = result_item[1]
+
+        row_format = ("{:>" + str(max_length) + "}") * 2
+        for result_item in result:
+            print(row_format.format(result_item[0], result_item[1]))
+    else:
+        print("分词失败")
