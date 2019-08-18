@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import sougou_fenci
+import sys
+
+if len(sys.argv) < 2:
+    print("请输入要分词的内容")
+else:
+    resp = sougou_fenci.get_fenci(sys.argv[1])
+    print(resp)
