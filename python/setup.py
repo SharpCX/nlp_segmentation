@@ -24,14 +24,14 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="nlp_fenci",
-    version="1.2.0",
+    version="1.2.3",
     author="cx",
     author_email="sharpcx@live.com",
     description="分词工具",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/SharpCX/sougou_fenci.git",
-    packages=["bin","fenci"],
+    packages=["bin", "fenci"],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
