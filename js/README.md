@@ -1,4 +1,4 @@
-## 分词工具
+## 分词工具(已改名nlp_fenci)
 ## node版(有python版)
 ### 安装
 `npm install -g sougou_fenci`
