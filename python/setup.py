@@ -23,11 +23,11 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="sougou_fenci",
-    version="1.1.7",
+    name="nlp_fenci",
+    version="1.2.0",
     author="cx",
     author_email="sharpcx@live.com",
-    description="搜狗分词工具",
+    description="分词工具",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/SharpCX/sougou_fenci.git",

@@ -1,14 +1,15 @@
 {
-  "name": "sougou_fenci",
-  "version": "1.0.1",
-  "description": "搜狗分词工具",
+  "name": "nlp_fenci",
+  "version": "1.1.2",
+  "description": "分词工具",
   "main": "index.js",
   "readme": "",
   "scripts": {
-    "run" : "node index.js"
+    "run": "node index.js"
   },
   "bin": {
-    "sougou_fenci_cli": "index.js"
+    "sougou_fenci_cli": "sougou.js",
+    "baidu_fenci_cli": "baidu.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   },
   "homepage": "https://github.com/SharpCX/sougou_fenci#readme",
   "dependencies": {
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "request-cookies": "^1.1.0"
   }
 }
