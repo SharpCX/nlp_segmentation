@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from fenci import sougou
+from fenci import baidu
 import sys
 
 if len(sys.argv) < 2:
     print("请输入要分词的内容")
 else:
-    resp = sougou(sys.argv[1])
+    resp = baidu(sys.argv[1])
     result = resp.get("result")
 
     if result:

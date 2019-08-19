@@ -24,19 +24,19 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="sougou_fenci",
-    version="1.0.1",
+    version="1.1.7",
     author="cx",
     author_email="sharpcx@live.com",
     description="搜狗分词工具",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/SharpCX/sougou_fenci.git",
-    packages=setuptools.find_packages(),
+    packages=["bin","fenci"],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    scripts=['bin/sougou_fenci'],
+    scripts=['bin/sougou_fenci', 'bin/baidu_fenci'],
     install_requires=load_requirements(os.path.join(dir_path, 'requirements.txt'))
 )
