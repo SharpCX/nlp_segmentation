@@ -25,13 +25,13 @@ with open("./README.rst", "r") as fh:
 
 setuptools.setup(
     name="nlp_segmentation",
-    version="1.2.6",
+    version="1.2.7",
     author="cx",
     author_email="sharpcx@live.com",
     description="分词工具",
     # long_description_content_type='text/markdown',
     long_description=long_description,
-    url="https://github.com/SharpCX/sougou_fenci.git",
+    url="https://github.com/SharpCX/nlp_segmentation.git",
     packages=["bin", "nlp_segmentation"],
     classifiers=[
         "Programming Language :: Python :: 3",
