@@ -1,7 +1,7 @@
 ## 分词工具
 ## python版(有node版)
 ### 安装
-`pip install nlp_fenci`
+`pip install nlp_segmentation`
 
 ### command-line
 #### 搜狗分词
@@ -20,8 +20,8 @@ $ baidu_fenci 武汉市长江大桥
 
 ### sougou 分词 code
 ``` python
-import sougou_fenci
-resp = sougoou_fenci.sougou("武汉市长江大桥")
+import nlp_segmentation
+resp = nlp_segmentation.sougou("武汉市长江大桥")
 for result_item in resp.result:
     print(row_format.format(result_item[0], result_item[1]))
 
@@ -33,8 +33,8 @@ for result_item in resp.result:
 
 ### baidu 分词 code
 ``` python
-import sougou_fenci
-resp = sougoou_fenci.baidu("武汉市长江大桥")
+import nlp_segmentation
+resp = nlp_segmentation.baidu("武汉市长江大桥")
 for result_item in resp.result:
     print(row_format.format(result_item[0], result_item[1]))
 

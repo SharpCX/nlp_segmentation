@@ -1,20 +1,27 @@
-## 搜狗分词工具
-## python版
+## 分词工具
+## python版(有node版)
 ### 安装
-`pip install sougou_fenci`
+`pip install nlp_segmentation`
 
 ### command-line
+#### 搜狗分词
+```bash
 $ sougou_fenci 武汉市长江大桥
--> 
 武汉市 n
 长江 n
 大桥 n
-![commandline](./screenshot/screen1.png?raw=true "commandline")
+```
+#### 百度分词
+```bash
+$ baidu_fenci 武汉市长江大桥
+武汉        地名
+长江大桥        地名
+```
 
-### code
+### sougou 分词 code
 ``` python
-import sougou_fenci
-resp = sougoou_fenci.get_fenci("武汉市长江大桥")
+import nlp_segmentation
+resp = nlp_segmentation.sougou("武汉市长江大桥")
 for result_item in resp.result:
     print(row_format.format(result_item[0], result_item[1]))
 
@@ -24,15 +31,15 @@ for result_item in resp.result:
 # 大桥         n
 ```
 
-## node版
-### 安装
-`npm install -g sougou_fenci`
+### baidu 分词 code
+``` python
+import nlp_segmentation
+resp = nlp_segmentation.baidu("武汉市长江大桥")
+for result_item in resp.result:
+    print(row_format.format(result_item[0], result_item[1]))
 
+# 结 果
+# 武汉市         地名
+# 长江大桥         地名
+```
 
-### command-line
-$ sougou_fenci_cli 武汉市长江大桥
--> 
-武汉市 n
-长江 n
-大桥 n
-![commandline](./screenshot/screen2.png?raw=true "commandline")

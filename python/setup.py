@@ -23,7 +23,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="nlp_fenci",
+    name="nlp_segmentation",
     version="1.2.3",
     author="cx",
     author_email="sharpcx@live.com",
