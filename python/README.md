@@ -5,14 +5,15 @@
 
 ### command-line
 #### 搜狗分词
-```bash
+``` bash
 $ sougou_fenci 武汉市长江大桥
 武汉市 n
 长江 n
 大桥 n
 ```
+
 #### 百度分词
-```bash
+``` bash
 $ baidu_fenci 武汉市长江大桥
 武汉        地名
 长江大桥        地名
@@ -42,4 +43,3 @@ for result_item in resp.result:
 # 武汉市         地名
 # 长江大桥         地名
 ```
-

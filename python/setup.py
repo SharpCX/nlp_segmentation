@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-# python lib_setup.py sdist bdist_wheel upload
+# pandoc --from=markdown --to=rst --output=README.rst README.md
+# python setup.py sdist bdist_wheel upload -r pypi
 import os
 
 try:
@@ -19,17 +20,17 @@ def load_requirements(fname):
     return [str(ir.req) for ir in reqs]
 
 
-with open("README.md", "r") as fh:
+with open("./README.rst", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="nlp_segmentation",
-    version="1.2.3",
+    version="1.2.5",
     author="cx",
     author_email="sharpcx@live.com",
     description="分词工具",
+    # long_description_content_type='text/markdown',
     long_description=long_description,
-    long_description_content_type="text/markdown",
     url="https://github.com/SharpCX/sougou_fenci.git",
     packages=["bin", "fenci"],
     classifiers=[
