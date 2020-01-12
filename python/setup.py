@@ -25,7 +25,7 @@ with open("./README.rst", "r") as fh:
 
 setuptools.setup(
     name="nlp_segmentation",
-    version="1.2.5",
+    version="1.2.6",
     author="cx",
     author_email="sharpcx@live.com",
     description="分词工具",
