@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const request = require('request');
+const lexon = require('./lexon')
 
 if(process.argv.length<3){
     console.log("请输入要分词的内容");
@@ -22,7 +23,11 @@ function callback(error, response, body) {
         const info = JSON.parse(body);
         if(info && info.result){
             for (item in info.result){
-                console.log(info.result[item].join(','));
+                if(info.result[item].length>1){
+                    console.log(info.result[item][0]+","+lexon[info.result[item][1]])
+                } else {
+                    console.log(info.result[item].join(','));
+                }
             }
         } else {
             console.log("分词失败");

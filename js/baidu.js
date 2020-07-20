@@ -2,50 +2,18 @@
 
 const request = require('request');
 var Cookie = require('request-cookies').Cookie;
+const lexon = require('./lexon')
 
 if (process.argv.length < 3) {
     console.log("请输入要分词的内容");
     return
 }
 
-
-var lexon = {
-    "per": "人名",
-    "loc": "地名",
-    "org": "机构名",
-    "time": "时间",
-    "n": "普通名词",
-    "nr": "人名",
-    "nz": "其他名词",
-    "a": "形容词",
-    "m": "数量词",
-    "c": "连词",
-    "f": "方位名词",
-    "ns": "地名",
-    "v": "普通动词",
-    "ad": "副形词",
-    "q": "量词",
-    "u": "助词",
-    "s": "处所名词",
-    "nt": "机构团体名",
-    "vd": "动副词",
-    "an": "名形词",
-    "r": "代词",
-    "xc": "其他虚词",
-    "t": "时间名词",
-    "nw": "作品名",
-    "vn": "名动词",
-    "d": "副词",
-    "p": "介词",
-    "w": "标点符号"
-}
-
-
 function requestNlp() {
-    const options = {
-        url: "http://ai.baidu.com/tech/nlp/lexical",
-        method: "GET"
-    };
+    // const options = {
+    //     url: "https://ai.baidu.com/tech/nlp/lexical",
+    //     method: "GET"
+    // };
 
     function callback(error, response, body) {
         if (!error && response.statusCode == 200) {
@@ -60,16 +28,15 @@ function requestNlp() {
             }
             getnlp(cookieList);
         } else {
-            console.log("请求失败");
+            console.log("请求失败"+body);
         }
     }
 
-    request.post(options, callback);
+    request("https://ai.baidu.com/tech/nlp/lexical", callback);
 }
 
 function getnlp(cookies) {
-    // console.log(cookies);
-    options = {
+    let options = {
         url: "http://ai.baidu.com/aidemo",
         form: {
             "apiType": "nlp",
